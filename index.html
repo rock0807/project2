@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Restaurant</title>
+   <style>
+    /* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header styles */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .logo img {
+    height: 60px;
+    vertical-align: middle;
+  }
+  
+  .nav {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .nav a {
+    display: inline-block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav a:hover {
+    color: #c00;
+  }
+  
+  .social {
+    display: inline-block;
+  }
+  
+  .social a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .social a:hover {
+    color: #c00;
+  }
+  
+  /* Banner styles */
+  .banner {
+    height: 500px;
+    background: url('https://via.placeholder.com/1200x500') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .banner h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  .banner p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* About us styles */
+  .about {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+  }
+  
+  .about img {
+    flex: 1;
+    max-width: 100%;
+    margin-right: 50px;
+  }
+  
+  .about-text {
+    flex: 1;
+  }
+  
+  .about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  /* Menu styles */
+  .menu {
+    margin: 50px 0;
+  }
+  
+  .menu-item {
+    margin-bottom: 30px;
+  }
+  
+  .menu-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .menu-item p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .menu-item .price {
+    font-weight: bold;
+  }
+  
+  /* Find us styles */
+  .find-us {
+    display: flex;
+    margin: 50px 0;
+  }
+  
+  .contact {
+    flex: 1;
+    margin-right: 50px;
+  }
+  
+
+  
+   </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="header-container">
+        <h1 class="restaurant-name">Pizza Restaurant</h1>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Find Us</a></li>
+          </ul>
+        </nav>
+        <div class="social-icons">
+          <a href="#"><img src="facebook-icon.svg" alt="Facebook"></a>
+          <a href="#"><img src="instagram-icon.svg" alt="Instagram"></a>
+          <a href="#"><img src="twitter-icon.svg" alt="Twitter"></a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="main-content">
+      <div class="main-content-container">
+        <div class="banner">
+          <h2>Welcome to Pizza Restaurant</h2>
+          <img src="data:image/jpeg;base64,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" 
+          width="70%" height="500px">
+          <p>Enjoy our delicious pizza made with fresh ingredients and a unique touch.</p>
+          <a href="#" class="btn-primary">Order Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+      <div class="about-us-container">
+        <h2>About Us</h2>
+        <img src="about-us-image.jpg" alt="About Us Image" class="about-us-image">
+        <p>We are a family-owned restaurant that has been serving delicious pizza since 1980. Our pizzas are made with the freshest ingredients and a secret family recipe that has been passed down for generations.</p>
+        <p>Come and enjoy our cozy atmosphere and friendly service, and taste the difference that quality ingredients and a passion for pizza can make.</p>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu">
+      <div class="menu-container">
+        <h2>Our Menu</h2>
+        <ul>
+          <li>
+            <h3>Classic Margherita</h3>
+            <p>Tomato sauce, mozzarella cheese, and fresh basil.</p>
+            <span class="price">$12.99</span>
+          </li>
+          <li>
+            <h3>Hawaiian</h3>
+            <p>Tomato sauce, mozzarella cheese, ham, and pineapple.</p>
+            <span class="price">$14.99</span>
+          </li>
+          <li>
+            <h3>Meat Lovers</h3>
+            <p>Tomato sauce, mozzarella cheese, pepperoni, sausage, and bacon.</p>
+            <span class="price">$16.99</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+<!-- Find Us Section -->
+<section id="find-us" class="section">
+  <h2 class="section-heading">Find Us</h2>
+  <div class="find-us-container">
+    <div class="find-us-info">
+      <h3 class="find-us-heading">Location</h3>
+      <p class="find-us-text">123 Main Street<br>Anytown, USA 12345</p>
+      <h3 class="find-us-heading">Contact</h3>
+      <p class="find-us-text">Phone: (555) 555-5555<br>Email: info@pizzarestaurant.com</p>
+    </div>
+    <div class="find-us-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235555.23606279987!2d-74.032373!3d40.75621259999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a7ae79c902d%3A0xf2926e1661c7d34e!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sng!4v1646348354963!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="images/logo-white.png" alt="Pizza Restaurant Logo">
+    </div>
+    <div class="footer-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Find Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <ul>
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-copy">
+    <p>&copy; 2023 Pizza Restaurant. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
